@@ -1,6 +1,25 @@
 # STARC-9 Dataset & Benchmark Code
 
-The **STARC-9** dataset is a curated colorectal cancer (CRC) histopathology benchmark with **nine tissue classes**:
+## 🔎 Overview
+
+This repository provides the **STARC-9 dataset** and **benchmark codebase** for multi-class tissue classification in colorectal cancer (CRC) histopathology.  
+It is designed for researchers, data scientists, and computational pathology practitioners who aim to:
+
+- Train and evaluate **deep learning models** for CRC tissue classification.  
+- Benchmark models across **multiple architectures** (CNNs, Vision Transformers, Foundation Models, KimiaNet, HistoViT, etc.).  
+- Explore **downstream tasks** such as tumor segmentation at the tile and patch levels.  
+- Reproduce and extend state-of-the-art experiments on curated CRC datasets.  
+
+### Key Features
+- **Nine Tissue Classes**: ADI, LYM, MUS, MUC, BLD, TUM, NOR, NCS, FCT.  
+- **Normalized Training & Validation Data**: Ensuring consistency across datasets.  
+- **Benchmark Framework**: Easy-to-use scripts for training, evaluating, and comparing models.  
+- **Downstream Segmentation Tasks**: Includes tumor patch mapping and evaluation workflows.  
+- **Reproducible Results**: Config-driven design for transparent experiments.  
+
+This repository is intended as a **standardized starting point** for researchers to explore tissue classification, benchmark novel architectures, and extend methods towards downstream applications like survival analysis, tumor burden estimation, and segmentation.
+
+The **STARC-9** dataset is a curated colorectal cancer (CRC) histopathology tile level images with **nine tissue classes**:
 
 - **ADI** — Adipose tissue  
 - **LYM** — Lymphoid tissue  
@@ -14,7 +33,7 @@ The **STARC-9** dataset is a curated colorectal cancer (CRC) histopathology benc
 
 ---
 
-## 📂 Dataset Folder Structure
+## 📂 Dataset Folder Structure (Hugging face)
 
 <pre>
 📂 Path2AI/STARC-9
@@ -52,6 +71,19 @@ The **STARC-9** dataset is a curated colorectal cancer (CRC) histopathology benc
 </pre>
 
 ---
+## 🚀 Quick Start (3 commands)
+
+```bash
+# 1) Setup
+conda create -n starc9 python=3.12 && conda activate starc9 && \
+pip install torch torchvision timm pandas numpy matplotlib seaborn scikit-learn umap-learn tqdm pillow transformers
+
+# 2) Train (example with CTranspath)
+python main.py --model transpath --epochs 10 --batch_size 32 --multi_gpu
+
+# 3) Evaluate
+python evaluate_model.py --model transpath --batch_size 32 --data_path <path_to_validation_data>
+```
 
 ## ⚙️ 1. Setup Environment
 
@@ -66,7 +98,7 @@ Install required packages:
 ```bash
 pip install torch torchvision timm pandas numpy matplotlib seaborn scikit-learn umap-learn tqdm pillow transformers
 ```
-## 2. Organize Project Files
+## 🗂️2. Organize Project Files
 
 Place all source files in a single project directory:
 
