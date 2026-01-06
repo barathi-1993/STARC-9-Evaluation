@@ -143,6 +143,8 @@ This will:
 - Generate summary CSV: benchmark_summary.csv
 - Produce comparison plots in plots/
 ```
+Note: The training and validation data were preprocessed using Macenko normalization with the provided sample image. For optimal inference results, please use this same image to normalize your test set.
+
 ## ✅ 5. Evaluate on Validation/Test Sets
 
 Evaluate a trained model on validation or test data:
