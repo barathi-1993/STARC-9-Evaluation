@@ -168,6 +168,9 @@ Outputs:
 2) Remap predicted tumor tiles to the patch intersecting the ground-truth mask (2048).
 3) Run segmentation evaluation and compare results.
 ```
+
+<img width="1000" height="400" alt="TA_Figure_10_STARC9_SEGMENTATION" src="https://github.com/user-attachments/assets/8c231562-0385-4d61-b5ca-3f6d0868e61b" />
+
 ## 🔎 7. Classify Extracted Tiles from a Patch
 
 Use the best trained model weights (also applies for WSI-level classification):
@@ -180,6 +183,7 @@ python Classifiy_extracted_tiles_from_a_wsi_with_best_trained_model_weights.py
 ```bash
 python Remap_tumor_patch_segmentation.py
 ```
+
 ## 📈 9. Segmentation Evaluation & Comparison
 
 ```bash
