@@ -1,5 +1,7 @@
 # STARC-9 Dataset & Benchmark Code
 
+<img width="2179" height="1180" alt="Figure_6" src="https://github.com/user-attachments/assets/2505bbae-5cb5-4e56-aa82-da4179180742" />
+
 ## 🔎 Overview
 
 This repository provides the **STARC-9 dataset** and **benchmark codebase** for multi-class tissue classification in colorectal cancer (CRC) histopathology.  
