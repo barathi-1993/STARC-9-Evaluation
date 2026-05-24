@@ -1,4 +1,4 @@
-# STARC-9 Dataset & Benchmark Code
+# STARC-9 Dataset & Benchmark Code  
 
 <img width="2179" height="1180" alt="Figure_6" src="https://github.com/user-attachments/assets/2505bbae-5cb5-4e56-aa82-da4179180742" />
 
